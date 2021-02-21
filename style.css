@@ -55,3 +55,61 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+/* Buttons */
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+button {
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(180, 180, 180);
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:focus {
+    outline: none;
+}
+
+.operator {
+    background: grey;
+    color: white;
+    font-size: 30px;
+}
+
+.clear {
+    background: rgb(240, 30, 30);
+    color: white;
+}
+
+.clear:hover {
+    filter: brightness(90%);
+}
+
+.equal-sign {
+    grid-column: -2;
+    grid-row: 2 / span 4;
+    background: rgb(15, 210, 90);
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+    .calculator {
+        width: 95%;
+    }
+}
